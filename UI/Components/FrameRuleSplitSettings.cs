@@ -26,7 +26,5 @@ namespace LiveSplit.UI.Components
 		{
 			return SettingsHelper.CreateSetting(document, parent, "Version", "1.0.0");
 		}
-
-		//public int GetSettingsHashCode() => CreateSettingsNode(null, null);
 	}
 }

@@ -16,15 +16,12 @@ namespace LiveSplit.UI.Components
 			CreateSettingsNode(document, parent);
 			return parent;
 		}
-
-		public void SetSettings(XmlNode node)
-		{
-			var element = (XmlElement)node;
-		}
-
+		
 		private int CreateSettingsNode(XmlDocument document, XmlElement parent)
 		{
 			return SettingsHelper.CreateSetting(document, parent, "Version", "1.0.0");
 		}
+
+		public void SetSettings(XmlNode node) { }
 	}
 }

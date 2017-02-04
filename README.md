@@ -17,4 +17,4 @@ The binary is available in the <a href="https://github.com/blairmadison11/LiveSp
 
 <h3>To disable:</h3>
 
-* Remove the Frame Rule Split component in layout settings.
+* Remove the <b>Frame Rule Split</b> component in layout settings.

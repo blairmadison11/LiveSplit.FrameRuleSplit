@@ -3,11 +3,11 @@ FrameRuleSplit is a component for LiveSplit that rounds each split (except the l
 
 The binary is available in the <a href="https://github.com/blairmadison11/LiveSplit.FrameRuleSplit/releases">releases section</a>.
 
-To install:
+<h3>To install:</h3>
 
 * Place <b>LiveSplit.FrameRuleSplit.dll</b> into your <b>LiveSplit/Components</b> folder.
 
-To enable:
+<h3>To enable:</h3>
 
 1. Open the <b>Edit Layout</b> dialog.
 2. Open the <b>Add Component</b> menu.
@@ -15,6 +15,6 @@ To enable:
 4. Select the <b>Frame Rule Split</b> component.
 5. Click OK to exit layout settings.
 
-To disable:
+<h3>To disable:</h3>
 
 * Remove the Frame Rule Split component in layout settings.

@@ -19,7 +19,7 @@ namespace LiveSplit.UI.Components
 		
 		private int CreateSettingsNode(XmlDocument document, XmlElement parent)
 		{
-			return SettingsHelper.CreateSetting(document, parent, "Version", "1.0.0");
+			return SettingsHelper.CreateSetting(document, parent, "Version", "1.0");
 		}
 
 		public void SetSettings(XmlNode node) { }

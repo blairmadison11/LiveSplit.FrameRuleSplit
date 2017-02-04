@@ -7,7 +7,17 @@ namespace LiveSplit.UI.Components
 {
 	class FrameRuleSplit : LogicComponent
 	{
-		protected const double FRAME_RULE_MILLISECONDS = 349.424533333339;
+		// Number of milliseconds in a single NTSC frame rule
+		protected const double FRAME_RULE_MILLISECONDS = 349.42453333334;
+
+		// The equation to calculate the frame rate of the NTSC console is:
+		// ([frequency of CPU] * [# of PPU ticks per CPU cycle]) / (([# of PPU ticks per scanline] * [# of scanlines]) - [odd frame idle skip])
+		// (1789772.7272727 * 3) / ((341 * 262) - 0.5) = ~ 60.09881389744
+
+		// The equation to calculate the length of a frame rule is:
+		// [# of frames in frame rule] / [frame rate of console]
+		// 21 frames / 60.09881389744 fps = ~ 349.42453333334 milliseconds
+
 
 		public FrameRuleSplitSettings Settings { get; set; }
 		protected LiveSplitState CurrentState { get; set; }
@@ -26,13 +36,12 @@ namespace LiveSplit.UI.Components
 			if (CurrentState.CurrentPhase != TimerPhase.Ended)
 			{
 				int splitIndex = CurrentState.CurrentSplitIndex - 1;
-				Time splitTime = CurrentState.Run[splitIndex].SplitTime;
-				TimeSpan? splitRealTime = splitTime.RealTime;
-				if (splitRealTime != null)
+				TimeSpan? timeElapsed = CurrentState.Run[splitIndex].SplitTime.RealTime;
+				if (timeElapsed != null)
 				{
-					double frameRuleSpan = splitRealTime.Value.TotalMilliseconds / FRAME_RULE_MILLISECONDS;
-					double roundedRealTimeSpan = Math.Round(Math.Round(frameRuleSpan) * FRAME_RULE_MILLISECONDS);
-					CurrentState.Run[splitIndex].SplitTime = new Time(TimeSpan.FromMilliseconds(roundedRealTimeSpan));
+					double frameRulesElapsed = timeElapsed.Value.TotalMilliseconds / FRAME_RULE_MILLISECONDS;
+					double timeElapsedRoundedToFrameRule = Math.Round(Math.Round(frameRulesElapsed) * FRAME_RULE_MILLISECONDS);
+					CurrentState.Run[splitIndex].SplitTime = new Time(TimeSpan.FromMilliseconds(timeElapsedRoundedToFrameRule));
 				}
 			}
 		}

@@ -11,11 +11,12 @@ The formula used to calculate the duration of a frame rule is:<br />
 <i>[# of frames in frame rule] / [frame rate of console]</i><br />
 <i>21 frames / 60.09881389744 fps = ~ 349.42453333334 milliseconds</i>
 
-The binary is available in the <a href="https://github.com/blairmadison11/LiveSplit.FrameRuleSplit/releases">releases section</a>.
+
 
 <h3>To install:</h3>
 
-* Place <b>LiveSplit.FrameRuleSplit.dll</b> into your <b>LiveSplit/Components</b> folder.
+* Dowload <b>LiveSplit.FrameRuleSplit.dll</b> from the <a href="https://github.com/blairmadison11/LiveSplit.FrameRuleSplit/releases">releases section</a>.
+* Place it into your <b>LiveSplit\Components</b> folder.
 
 <h3>To enable:</h3>
 

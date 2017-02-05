@@ -1,7 +1,7 @@
 # LiveSplit.FrameRuleSplit
 FrameRuleSplit is a component for LiveSplit that rounds each split (except the last split) to the nearest NTSC 21 frame rule (~0.349 seconds). This component is intended for use with games that utilize the frame rule, such as Super Mario Bros. for the NES.
 
-To avoid rounding error propogation, this component uses a high-precision calculation of the frame rule duration.
+To avoid rounding error propagation, this component uses a high-precision calculation of the frame rule duration.
 
 The formula used to calculate the frame rate of the NTSC console is:<br />
 <i>([frequency of CPU] * [# of PPU ticks per CPU cycle]) / (([# of PPU ticks per scanline] * [# of scanlines]) - [odd frame idle skip])</i><br />

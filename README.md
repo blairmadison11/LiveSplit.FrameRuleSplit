@@ -15,7 +15,7 @@ The formula used to calculate the duration of a frame rule is:<br />
 
 <h3>To install:</h3>
 
-* Dowload <b>LiveSplit.FrameRuleSplit.dll</b> from the <a href="https://github.com/blairmadison11/LiveSplit.FrameRuleSplit/releases">releases section</a>.
+* Download <b>LiveSplit.FrameRuleSplit.dll</b> from the <a href="https://github.com/blairmadison11/LiveSplit.FrameRuleSplit/releases">releases section</a>.
 * Place it into your <b>LiveSplit\Components</b> folder.
 
 <h3>To enable:</h3>

@@ -4,12 +4,12 @@ FrameRuleSplit is a component for LiveSplit that rounds each split (except the l
 To avoid rounding error propogation, this component uses a high-precision calculation of the frame rule duration.
 
 The formula used to calculate the frame rate of the NTSC console is:<br />
-&emsp;([frequency of CPU] * [# of PPU ticks per CPU cycle]) / (([# of PPU ticks per scanline] * [# of scanlines]) - [odd frame idle skip])<br />
-&emsp;(1789772.7272727 * 3) / ((341 * 262) - 0.5) = ~ 60.09881389744
+<i>([frequency of CPU] * [# of PPU ticks per CPU cycle]) / (([# of PPU ticks per scanline] * [# of scanlines]) - [odd frame idle skip])</i><br />
+<i>(1789772.7272727 * 3) / ((341 * 262) - 0.5) = ~ 60.09881389744</i>
 
 The formula used to calculate the duration of a frame rule is:<br />
-&emsp;[# of frames in frame rule] / [frame rate of console]<br />
-&emsp;21 frames / 60.09881389744 fps = ~ 349.42453333334 milliseconds
+<i>[# of frames in frame rule] / [frame rate of console]</i><br />
+<i>21 frames / 60.09881389744 fps = ~ 349.42453333334 milliseconds</i>
 
 The binary is available in the <a href="https://github.com/blairmadison11/LiveSplit.FrameRuleSplit/releases">releases section</a>.
 
